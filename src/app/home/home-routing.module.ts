@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { CarModule } from "../car/car.module";
-import { CustomerModule } from "../customer/customer.module";
+import { CarModule } from "./../car/car.module";
+import { CustomerModule } from "./../customer/customer.module";
 
 import { HomeComponent } from './home/home.component';
 

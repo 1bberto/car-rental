@@ -9,20 +9,22 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
-  },
-  {
-    path: "cars",
-    loadChildren: () => CarModule
-  },
-  {
-    path: "customers",
-    loadChildren: () => CustomerModule
-  }
+    component: HomeComponent,
+    children: [
+    {
+      path: "cars",
+      loadChildren: () => CarModule
+    },
+    {
+      path: "customers",
+      loadChildren: () => CustomerModule
+    }
+    ]
+}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class HomeRoutingModule {}

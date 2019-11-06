@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
+import { TimeService } from '../../shared/services/time.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  currentDate: Date;
+  constructor(private timeService: TimeService) { }
 
   ngOnInit() {
+
+    this.timeService.dateTime.subscribe((date: Date)=>this.currentDate = date);
   }
 
 }

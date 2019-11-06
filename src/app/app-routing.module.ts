@@ -6,12 +6,16 @@ import { LoginModule } from "./login/login.module";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "home",
     loadChildren: () => HomeModule
   },
   {
     path: "login",
     loadChildren: () => LoginModule
+  },
+  {
+    path: "",
+    redirectTo: "home"
   }
 ];
 

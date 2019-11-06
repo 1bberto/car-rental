@@ -31,8 +31,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    SharedModule,
     RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  declarations:[PageNotFoundComponent]
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Car } from '../../shared/models/car';
 import { CarService } from '../services/car.service';
 
 @Component({
@@ -9,9 +10,12 @@ import { CarService } from '../services/car.service';
 })
 export class CarListComponent implements OnInit {
 
+  carList: Car[] = [];
+
   constructor(private carService: CarService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.carList = await this.carService.getCars();    
   }
 
 }

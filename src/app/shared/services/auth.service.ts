@@ -11,14 +11,25 @@ export class AuthService {
    * @description
    * Login the user in the application
    */
-  async login(userName: User) {
-    localStorage.setItem("user", userName);
-    this.router.navigate(["/"]);
+  async login(user: User): Promise<boolean> {
+    var userData = await this.getUser();
+
+    if(userData.login == user.login &&
+       userData.password == user.password)
+    {
+      localStorage.setItem("user", userData.name);
+      return true;
+    }
+    return false;
   }
 
+  /**
+   * @description
+   * get the user data
+   */
   private getUser(): Promise<User> {
     return new Promise((resolve, reject) => {
-      this.httpClient.get<User>("/assets/user.json").subscribe(
+      this.httpClient.get<User>("https://raw.githubusercontent.com/1bberto/car-rental/master/files/user.json").subscribe(
         response => {
           resolve(response);
         },

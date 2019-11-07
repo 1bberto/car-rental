@@ -1,5 +1,19 @@
-home works
+<mat-toolbar color="primary" class="fixed-header">
+	<mat-toolbar-row>
 
-<router-outlet>
-  
-</router-outlet>
+		<a mat-button routerLink="['./home']" routerLinkActive="active">Home</a>
+		<a mat-button routerLink="['/home/cars']">Cars</a>
+		<a mat-button routerLink="['/home/customers']">Customers</a>
+	</mat-toolbar-row>
+</mat-toolbar>
+<main>
+	<router-outlet style="margin-top: 80px;"></router-outlet>
+</main>
+
+<footer>
+  <mat-toolbar color="primary" class="footer">
+    <span layout="row" layout-align="center center" flex>
+      Another Car Rent System - by Humberto Rodrigues - {{currentDate|date: 'MM/dd/yyyy HH:mm:ss'}}
+    </span>
+  </mat-toolbar>
+</footer>

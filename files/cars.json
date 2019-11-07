@@ -3,9 +3,9 @@
     "carId": "83d20c94-f423-4229-beaa-952bc75383d5",
     "brand": "FIAT",
     "model": "UNO",
-    "color": "red",
+    "color": "rede",
     "photoUrl": "http://www.abarthclub.org.za/img/colours/fe.jpg",
-    "available": true
+    "available": true 
   },
   {
     "carId": "83d20c95-f423-4229-beaa-952bc75383d5",

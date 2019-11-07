@@ -1,9 +1,32 @@
 <mat-toolbar color="primary" class="fixed-header">
 	<mat-toolbar-row>
+		RC System
+		<span>
+          <a mat-button 
+          href="#" 
+          [routerLink]="['/home']" 
+          [routerLinkActiveOptions]="{exact: true}"
+          routerLinkActive="mat-button-toggle-checked">Home</a>
+    </span>
+		<span>
+          <a mat-button 
+          href="#" 
+          [routerLink]="['/home/cars']" 
+          routerLinkActive="mat-button-toggle-checked">Cars</a>
+        </span>
+		<span>
+          <a mat-button 
+          href="#" 
+          [routerLink]="['/home/customers']" routerLinkActive="mat-button-toggle-checked">Customers</a>
+    </span>
+		<span>
+        <a mat-button (click)="logout()">Logout</a>
+      </span>
 
-		<a mat-button routerLink="['./home']" routerLinkActive="active">Home</a>
-		<a mat-button routerLink="['/home/cars']">Cars</a>
-		<a mat-button routerLink="['/home/customers']">Customers</a>
+		<span class="tool-text">
+        Hello - {{getUserName()}}      
+          {{currentDate|date: 'MM/dd/yyyy HH:mm:ss'}}
+        </span>
 	</mat-toolbar-row>
 </mat-toolbar>
 <main>
@@ -11,9 +34,9 @@
 </main>
 
 <footer>
-  <mat-toolbar color="primary" class="footer">
-    <span layout="row" layout-align="center center" flex>
-      Another Car Rent System - by Humberto Rodrigues - {{currentDate|date: 'MM/dd/yyyy HH:mm:ss'}}
+	<mat-toolbar color="primary" class="footer">
+		<span layout="row" layout-align="center center" flex>
+      Another Car Rent System
     </span>
-  </mat-toolbar>
+	</mat-toolbar>
 </footer>

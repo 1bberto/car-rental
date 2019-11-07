@@ -1,0 +1,18 @@
+[
+  {
+    "carId": "83d20c94-f423-4229-beaa-952bc75383d5",
+    "brand": "FIAT",
+    "model": "UNO",
+    "color": "red",
+    "photoUrl": "http://www.abarthclub.org.za/img/colours/fe.jpg",
+    "available": true
+  },
+  {
+    "carId": "db96aaf6-9631-4a2b-86fd-0fc68de8a10c",
+    "brand": "volkswagen",
+    "model": "Gol",
+    "color": "black",
+    "photoUrl": "http://www.abarthclub.org.za/img/colours/fe.jpg",
+    "available": true
+  }
+]

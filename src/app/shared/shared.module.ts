@@ -5,6 +5,7 @@ import { TimeService } from "./services/time.service";
 import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './security/auth.guard';
+import { RandomGeneratorService } from './services/random-generator.service';
 
 @NgModule({
   imports: [
@@ -15,11 +16,9 @@ import { AuthGuard } from './security/auth.guard';
   providers: [
     TimeService, 
     AuthService,
-    AuthGuard],
-  exports: [
-    TimeService,
-    AuthService,
     AuthGuard,
+    RandomGeneratorService],
+  exports: [
     PageNotFoundComponent]
 })
 export class SharedModule {}

@@ -6,10 +6,13 @@ import { CustomerModule } from "../customer/customer.module";
 
 import { HomeComponent } from './home/home.component';
 
+import { AuthGuard } from '../shared/security/auth.guard';
+
 const routes: Routes = [
   {
     path: "",
     component: HomeComponent,
+    canActivate: [ AuthGuard ],
     children: [
     {
       path: "cars",

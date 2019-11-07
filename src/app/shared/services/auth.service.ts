@@ -11,12 +11,12 @@ export class AuthService {
    * @description
    * Login the user in the application
    */
-  login(userName: User): void {
+  async login(userName: User) {
     localStorage.setItem("user", userName);
     this.router.navigate(["/"]);
   }
 
-  private get(): Promise<User> {
+  private getUser(): Promise<User> {
     return new Promise((resolve, reject) => {
       this.httpClient.get<User>("/assets/user.json").subscribe(
         response => {
